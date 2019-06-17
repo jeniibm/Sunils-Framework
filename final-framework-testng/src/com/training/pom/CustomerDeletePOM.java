@@ -81,11 +81,11 @@ private WebDriver driver;
 		Alert alert = driver.switchTo().alert();
 		alert.accept();
 		Thread.sleep(3000);
-		/*Actual_str = this.success.getText();
-		Actual = Actual_str.replace("/n", "x");
+		Actual_str = this.success.getText();
+		Actual = Actual_str.replace("\n", "");
 		System.out.println(Actual);
-		String Expected = " Success: You have modified customers!      ";
-		Assert.assertEquals(Actual,Expected);*/
+		String Expected = "Success: You have modified customers!×";
+		Assert.assertEquals(Actual,Expected);
 	}
 
 }
